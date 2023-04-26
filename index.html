@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="typing-effect.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/typing-effect.css" />
+    <link rel="stylesheet" href="/css/swiper.css" />
     <title>Kaushambi Gujral's Portfolio Website</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
 </head>
 <body>
     <div id="main">
@@ -34,7 +35,7 @@
         <!-- NAV -->   
         <div>
             <div id="nav" class="flex-r">
-              <div id="nav-logo" class="anchor"><img alt="logo" src = "logo-k.png" width="50px" height="50px"/></div>
+              <div id="nav-logo" class="anchor"><img alt="logo" src = "/assets/logo-k.png" width="50px" height="50px"/></div>
               <div id="nav-menu-btn" class="menu-icon flex-c orange-hover anchor">
                 <div id="menu-button-bar-0" class="menu-button-bar" style = "transform: translate(0px, 0px)"></div>
                 <div id="menu-button-bar-1" class="menu-button-bar" style = "opacity: 1"></div>
@@ -60,7 +61,10 @@
           <div id="about-container" class="flex-r">
             <p> 
               
-              <span>I am a <span class="orange-highlight">Software Engineer</span> with an interest in everything latest in tech. My professional journey
+              <span>I am a <span class="orange-highlight">Software Engineer</span> with an interest in everything latest in tech. 
+              I believe in multi-disciplinary learning and enjoy dabbling with a variety of tech & software.
+              <br/><br/>
+              My professional journey
                 began at Dell Technologies, where I had the chance to collaborate with global teams 
                 to aid in the making of a micro-service architecture for dell.com, and developing a new application for 
                 <a class="orange-highlight" href="https://www.dell.com/en-in/shop/deals"><span>dell.com's Deals Web Pages</span></a>.</span>
@@ -73,7 +77,6 @@
               <span>As a curious explorer in the world of Artificial Intelligence, I am pursuing MS in CS at Portland State University with a focus on<span class="orange-highlight"> AI/ML</span>.
                 During this time, I have had the opportunity to not only improve my software development knowledge but also learn more about 
                 Quantum Computing, Machine Learning, and Natural Language Processing. 
-                I've had the pleasure of working with esteemed professors and enthusiastic peers on various projects (some of which have been shared below).
               </span>
               <br/>
               <br/>
@@ -87,7 +90,7 @@
               <br/>
               <br/>
           </p>
-            <img src="mugshot.png" alt="headshot" width="250" height="250">
+            <img src="/assets/mugshot.png" alt="headshot" width="250" height="250">
           </div>
         </section>
         
@@ -104,6 +107,30 @@
             <h1>Work</h1>
             <hr/>
             <h5>Projects I've worked on 👩🏻‍💻</h5>
+          </div>
+          <div class="slide-container swiper">
+            <div class="slide-content swiper-wrapper">
+              
+              <div class="card-wrapper swiper-slide">
+                <div class="card flex-c">
+                  <div class="image-content">
+                    <div class="card-image">
+                      <img src="/assets/mugshot.png" alt="" class="card-img">
+                    </div>
+                  </div>
+                  <div class="card-content">
+                    <h2 class="title">MyAirline</h2>
+                    <p class="desc">Android app to manage airline and flight information</p>
+                  </div>
+                </div>
+              </div>
+
+              
+
+            
+            <div class="swiper-button-next orange-nav-next"></div>
+            <div class="swiper-button-prev orange-nav-prev"></div>
+            
           </div>
         </section>
 
@@ -171,7 +198,8 @@
     </div>
     <div class="cursor"></div>
     <div class="inner-cursor"></div>
-    <script defer src="script.js"></script>
-    <script defer src="typing-effect.js"></script>
+    <script defer src="/js/script.js"></script>
+    <script defer src="/js/typing-effect.js"></script>
+    <script defer src="/js/swiper.js"></script>
 </body>
 </html>

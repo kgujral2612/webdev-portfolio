@@ -371,6 +371,87 @@ h1 span {
 
 /* ========= WORK ========== */
 
+.card{
+    background: white;
+    padding: 2px;
+    border-radius: 20px;
+    max-width: 350px;
+    overflow: hidden;
+}
+
+.card img{
+    width: calc(100% - 16px);
+    margin: 8px;
+    margin-bottom: 5px;
+    object-fit: cover;
+    min-height: 300px;
+    border-radius: 13px;
+}
+.card-content{
+    padding: 8px 16px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.image-content{
+    padding: 1rem
+}
+
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-button-next.orange-nav-next, .swiper-button-prev.orange-nav-prev{
+    top: 90%;
+    color: var(--color-white);
+    width: 50px;
+    height: 50px;
+    background: var(--color-accent);
+    -moz-border-radius: 70px;
+    -webkit-border-radius: 70px;
+    border-radius: 50px;
+    
+}
+
+.swiper-button-next.orange-nav-next:after, .swiper-button-prev.orange-nav-prev:after{
+    font-size: 30px;
+}
+
+.swiper-button-next.orange-nav-next{
+    left: 60%;
+}
+
+.swiper-button-prev.orange-nav-prev{
+    left: 40%;
+}
+
+@media (max-width: 760px) {
+    .swiper-button-next {
+      right: 20px;
+      transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+      left: 20px;
+      transform: rotate(90deg);
+    }
+  }
+
+
 /* ========= CONTACT ========== */
 .container > hr {
     width: 40px;

@@ -9,6 +9,9 @@
     list-style: none;
     text-decoration: none;
 }
+a {
+    color: inherit;
+}
 
 html{
     scroll-behavior: smooth;
@@ -206,6 +209,9 @@ h1 span {
   right: 15%;
 }
 
+#resume-cta-btn{
+    margin-left: 2rem;
+}
 /* ========= Animated Mouse ========== */
 .middle{
     position:absolute;

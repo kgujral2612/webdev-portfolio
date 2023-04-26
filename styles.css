@@ -243,10 +243,25 @@ h1 span {
     to {
         top: 18px;
     }
-    
 }
 /* ========= ABOUT ========== */
+#about-container{
+    align-items: center;
+}
 
+#about-container p {
+    max-width: 60%;
+    padding: 2rem 4rem 2rem 0;
+}
+
+#about-container > img{
+    border: 5px solid var(--color-almost-black);
+    border-radius: 45px;
+}
+
+#about-container > img:hover{
+    border: none;
+}
 /* ========= NAV ========== */
 
 #nav{
@@ -351,7 +366,7 @@ h1 span {
 /* ========= WORK ========== */
 
 /* ========= CONTACT ========== */
-#contact > .container > hr {
+.container > hr {
     width: 40px;
     background-color: #FF923E;
     margin: 0;

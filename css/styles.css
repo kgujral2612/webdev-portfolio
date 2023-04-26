@@ -25,6 +25,7 @@ html{
     --color-accent: #FF923E;
     --color-light-orange: #ff9b4f;
     --color-dark-orange: #ff8426;
+    --color-v-dark-orange: #f76b00;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-light-beige: #F5EFE6;
@@ -32,6 +33,7 @@ html{
     --color-almost-black: #091434;
     --color-highlight-yellow: #FFB800;
     --color-highlight-purple: #8433CC;
+
 }
 
 body {
@@ -369,6 +371,48 @@ h1 span {
 
 .slide-transition{
     transition: left .9s cubic-bezier(.6, 0, .4, 1), right .9s cubic-bezier(.6, 0, .4, 1);
+}
+
+/* ========= SKILLS ========== */
+#skills-container{
+    width: 50%;
+}
+.skill-item{
+    padding: 0.5rem 0;
+}
+.skill-set__bar {
+    width: 100%;
+    height: 1.4rem;
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
+    box-shadow: 0 5px 15px 0 rgba(7, 33, 66, 0.15);
+}
+.skill-set__bar:after {
+    -webkit-animation: ratio90 1.5s forwards;
+    animation: ratio90 1.5s forwards;
+}
+.skill-set__bar:after {
+    background-image: -webkit-linear-gradient(left, var(--color-v-dark-orange), var(--color-accent) 42%, var(--color-light-orange));
+    background-image: -o-linear-gradient(left, var(--color-v-dark-orange), var(--color-accent) 42%, var(--color-light-orange));
+    background-image: linear-gradient(to right, var(--color-v-dark-orange),  var(--color-accent) 42%, var(--color-light-orange));
+}
+
+
+.skill-set__bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+}
+.skill-set__bar.advanced:after{
+    width: 85%;
+}
+.skill-set__bar.intermediate:after{
+    width: 65%;
 }
 
 /* ========= WORK ========== */

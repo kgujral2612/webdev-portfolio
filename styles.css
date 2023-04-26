@@ -55,7 +55,7 @@ h5 {
 
 section {
     margin-top: 8rem;
-    padding: 2rem;
+    padding: 6rem;
     height: calc(100vh);
 }
 
@@ -206,7 +206,45 @@ h1 span {
   right: 15%;
 }
 
+/* ========= Animated Mouse ========== */
+.middle{
+    position:absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.animated-mouse{
+    width: 24px;
+    height: 38px;
+    border: 3px solid var(--color-almost-black);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.animated-mouse:before{
+    content : "";
+    width : 5px;
+    height: 10px;
+    position: absolute;
+    top: 30px;
+    background-color: var(--color-almost-black);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    animation: mouse 1.5s infinite;
+    opacity: 1;
+}
+
+@keyframes mouse {
+    from {
+        top: 8px;
+    }
+    to {
+        top: 18px;
+    }
+    
+}
 /* ========= ABOUT ========== */
 
 /* ========= NAV ========== */

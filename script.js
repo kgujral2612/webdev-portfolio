@@ -46,7 +46,6 @@ var bar2 = document.querySelector("#menu-button-bar-2");
 var navMenuBtn = document.querySelector("#nav-menu-btn");
 var navMenuContainer = document.querySelector("#nav-menu-container");
 var navMenuItems = document.querySelectorAll(".nav-menu-item");
-console.log("found", bar2);
 
 navMenuBtn.addEventListener('click', ()=> {
   bar0.style.transform = bar0.style.transform === 'translate(0px, 0px)' ? 'translate(0px, 9px) rotate(45deg)' : 'translate(0px, 0px)';
@@ -70,13 +69,16 @@ for (var i = 0; i < navMenuItems.length; i++) {
 //===================================================
 
 const hiddenElements = document.querySelectorAll('.hidden');
-const observer = new IntersectionObserver((entries) => {
+const showingObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry)=> {
-      console.log(entry);
       if(entry.isIntersecting){
         entry.target.classList.add('show');
       }
   });
 });
+hiddenElements.forEach((el)=> showingObserver.observe(el));
 
-hiddenElements.forEach((el)=> observer.observe(el));
+const animatedMouse = document.querySelector(".animated-mouse");
+animatedMouse.addEventListener("click", function(){
+  document.getElementById("about").scrollIntoView({behavior: 'smooth'});
+});

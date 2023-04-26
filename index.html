@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="typing-effect.css" />
     <title>Kaushambi Gujral's Portfolio Website</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <div id="main">
@@ -13,7 +15,9 @@
         <section id="home" class="hidden flex-r">
             <div id="home-info-container" class="flex-c">
               <h1>Hi, my name <br/> is Kaushambi Gujral</h1>
-              <h3 id="sub-headline">I'm a <span class="orange-highlight" id="hats">Software Engineer</span></h3>
+              <h3 id="sub-headline">I'm
+                <span class="orange-highlight" id="typed-text"></span><span id="typing-cursor">&nbsp;</span>
+              </h3>
               <div id="home-cta-btn" class="big-button orange-hover anchor">Get in touch</div>
             </div>
             <div id="img-container">
@@ -113,5 +117,6 @@
     <div class="cursor"></div>
     <div class="inner-cursor"></div>
     <script defer src="script.js"></script>
+    <script defer src="typing-effect.js"></script>
 </body>
 </html>

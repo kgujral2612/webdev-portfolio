@@ -30,6 +30,8 @@ html{
     --color-light-beige: #F5EFE6;
     --color-gray: #7C8594;
     --color-almost-black: #091434;
+    --color-highlight-yellow: #FFB800;
+    --color-highlight-purple: #8433CC;
 }
 
 body {
@@ -373,10 +375,10 @@ h1 span {
 
 .card{
     background: white;
-    padding: 2px;
     border-radius: 20px;
-    max-width: 350px;
     overflow: hidden;
+    width: 350px;
+    height: 600px;
 }
 
 .card img{
@@ -404,8 +406,12 @@ h1 span {
 
 .swiper {
     width: 100%;
-    height: 100%;
-  }
+    height: calc(100% + 16px);
+}
+
+.slide-content.swiper-wrapper{
+    height: 90%;
+}
 
 .swiper-slide {
     text-align: center;
@@ -416,7 +422,7 @@ h1 span {
 }
 
 .swiper-button-next.orange-nav-next, .swiper-button-prev.orange-nav-prev{
-    top: 90%;
+    top: 93.5%;
     color: var(--color-white);
     width: 50px;
     height: 50px;
@@ -451,6 +457,39 @@ h1 span {
     }
   }
 
+.learn-more-btn{
+    margin: 1rem;
+}
+
+.card-content{
+    align-items: center;
+}
+
+.desc{
+    font-size: 1rem;
+}
+
+.tech-tag{
+    font-size: .65rem;
+    padding: 1px 7px;
+    margin-right: 5px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+}
+.tech-tag.yellow{
+    background: var(--color-highlight-yellow);
+}
+.tech-tag.purple{
+    background: var(--color-highlight-purple);
+}
+.tech-tag.grey{
+    background: white;
+    border: 1px solid #7C8594;
+    color: #7C8594;
+}
 
 /* ========= CONTACT ========== */
 .container > hr {

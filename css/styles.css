@@ -433,7 +433,7 @@ h1 span {
     margin: 8px;
     margin-bottom: 5px;
     object-fit: cover;
-    min-height: 300px;
+    height: 300px;
     border-radius: 13px;
 }
 .card-content{
@@ -690,6 +690,20 @@ and (max-width: 1023px){
     .slide-container.swiper{
         width: 750px;
     }
+    .card img{
+        margin: 2px;
+        margin-bottom: 2px;
+        height: 200px;
+    }
+    .card-content{
+        padding: 4px 8px;
+    }
+    .title{
+        font-size: 1.4rem;
+    }
+    .card{
+        height: 500px;
+    }
 }
 
 /* Tablet & Mobile */
@@ -706,11 +720,29 @@ and (max-width: 1023px){
     }
 }
 
+/* Small Laptop Screens */
+@media screen and (min-width: 1024px) and (max-width: 1500px) {
+    .card img{
+        margin: 2px;
+        margin-bottom: 2px;
+        height: 200px;
+    }
+    .card-content{
+        padding: 4px 8px;
+    }
+    .title{
+        font-size: 1.4rem;
+    }
+    .card{
+        height: 500px;
+    }
+}
+
 /* Desktop */
 @media screen and (min-width: 1023px) {
     .middle{
         position:absolute;
-        top: 80%;
+        top: 78%;
         display: block;
         left: 50%;
         transform: translate(-50%, -50%);

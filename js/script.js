@@ -60,18 +60,22 @@ navMenuBtn.addEventListener('click', ()=> {
 for (var i = 0; i < navMenuItems.length; i++) {
   (function(index) {
     navMenuItems[index].addEventListener("click", function() {
-      var activeItem = document.querySelector(".active");
-      activeItem.classList.remove("active");
-      navMenuItems[index].classList.add("active");
+      makeActive(navMenuItems[index]);
     })
   })(i);
 }
 
+function makeActive(newActiveNavItem){
+  var activeItem = document.querySelector(".active");
+  activeItem.classList.remove("active");
+  newActiveNavItem.classList.add("active");
+}
 
 //===================================================
 // ============= Intersection observer  =============
 //===================================================
 
+// Lazy load animations
 const hiddenElements = document.querySelectorAll('.hidden');
 const showingObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry)=> {
@@ -86,3 +90,20 @@ const animatedMouse = document.querySelector(".animated-mouse");
 animatedMouse.addEventListener("click", function(){
   document.getElementById("about").scrollIntoView({behavior: 'smooth'});
 });
+
+// Nav Link Highlight As You Scroll
+const navLinkHighlight = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      const elId = entry.target.id;
+      var navItem = document.querySelector("a[href='#" + elId + "']");
+      makeActive(navItem);
+    }
+  });
+});
+const menuItems = ["#home", "#about", "#work", "#skills", "#contact"];
+menuItems.forEach((el) => {
+  var element = document.querySelector(el);
+  navLinkHighlight.observe(element);
+});
+

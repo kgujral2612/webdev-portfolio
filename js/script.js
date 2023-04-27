@@ -75,15 +75,20 @@ function makeActive(newActiveNavItem){
 
 var lastScrollTop;
 var navbar = document.querySelector('#nav'); 
-const navHeigh = navbar.scrollHeight;
+const navHeight = navbar.scrollHeight;
 window.addEventListener('scroll',function(){
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-  if(scrollTop > lastScrollTop){
-    navbar.style.top='-' + navHeigh + 'px';
+  //if the nav menu is open then the nav buttons should always stick
+  if(navMenuContainer.style.right == '0px'){
+      navbar.style.top='0' ;
   }
   else{
-    navbar.style.top='0';
+    if(scrollTop > lastScrollTop){
+      navbar.style.top='-' + navHeight + 'px';
+    }
+    else{
+      navbar.style.top='0';
+    }
   }
   lastScrollTop = scrollTop;
 });

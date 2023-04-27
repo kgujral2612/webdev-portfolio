@@ -1,5 +1,4 @@
 // ======= CURSOR ANIMATINO ========
-
 var cursor = document.querySelector('.cursor');
 var cursorInner = document.querySelector('.inner-cursor');
 var anchors = document.querySelectorAll('.anchor');
@@ -47,14 +46,15 @@ var bar2 = document.querySelector("#menu-button-bar-2");
 var navMenuBtn = document.querySelector("#nav-menu-btn");
 var navMenuContainer = document.querySelector("#nav-menu-container");
 var navMenuItems = document.querySelectorAll(".nav-menu-item");
-
+var navWidth = navMenuContainer.offsetWidth;
+navMenuContainer.style.right = -navWidth + 'px';
 
 
 navMenuBtn.addEventListener('click', ()=> {
   bar0.style.transform = bar0.style.transform === 'translate(0px, 0px)' ? 'translate(0px, 9px) rotate(45deg)' : 'translate(0px, 0px)';
   bar1.style.opacity = bar1.style.opacity === '1' ? '0' : '1';
   bar2.style.transform = bar2.style.transform === 'translate(0px, 0px)' ? 'translate(0px, -9px) rotate(-45deg)' : 'translate(0px, 0px)';
-  navMenuContainer.style.right = navMenuContainer.style.right === '-400px' ? '0px' : '-400px';
+  navMenuContainer.style.right = navMenuContainer.style.right === -navWidth + 'px' ? '0px' : -navWidth + 'px';
 })
 
 for (var i = 0; i < navMenuItems.length; i++) {

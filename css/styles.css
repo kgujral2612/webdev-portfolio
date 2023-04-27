@@ -718,6 +718,9 @@ and (max-width: 1023px){
     #skills-container{
         width : 100%
     }
+    .inner-cursor, .cursor{
+        display: none;
+    }
 }
 
 /* Small Laptop Screens */

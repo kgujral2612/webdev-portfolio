@@ -71,6 +71,24 @@ function makeActive(newActiveNavItem){
   newActiveNavItem.classList.add("active");
 }
 
+// nav sticks upon scroll up, otherwise disappears
+
+var lastScrollTop;
+var navbar = document.querySelector('#nav'); 
+const navHeigh = navbar.scrollHeight;
+window.addEventListener('scroll',function(){
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if(scrollTop > lastScrollTop){
+    navbar.style.top='-' + navHeigh + 'px';
+  }
+  else{
+    navbar.style.top='0';
+  }
+  lastScrollTop = scrollTop;
+});
+
+
 //===================================================
 // ============= Intersection observer  =============
 //===================================================

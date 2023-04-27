@@ -629,30 +629,24 @@ h1 span {
 /* Small Mobile */
 @media screen and (max-width: 400px){
     h1{
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
     section{
         padding: 1.5rem;
     }
     #sub-headline{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     .padding-sm-6{
         padding-top: 6rem;
     }
     .big-button{
-        font-size : 0.9rem;
+        font-size : 0.6rem;
     }
 }
 
 /* Mobile */
 @media screen and (max-width: 767px){
-    h1{
-        font-size: 2.9rem;
-    }
-    #sub-headline{
-        font-size: 2rem;
-    }
     #nav-menu-container{
         width: calc(100%);
     }
@@ -670,6 +664,9 @@ h1 span {
         width: 30px;
         height: 30px;
         top: 98%;
+    }
+    .slide-content.swiper-wrapper {
+        height: 700px;
     }
     
 }
@@ -689,6 +686,9 @@ and (max-width: 1023px){
     }
     .slide-container.swiper{
         width: 750px;
+    }
+    .slide-content.swiper-wrapper {
+        height: 650px;
     }
     .card img{
         margin: 2px;

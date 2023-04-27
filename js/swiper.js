@@ -10520,7 +10520,7 @@
 
 
 var swiper = new Swiper('.swiper', {
-    slidesPerView: 3,
+    slidesPerView: window.innerWidth > 1023 ? 3 : window.innerWidth > 767 ? 2 : 1,
     direction: getDirection(),
     navigation: {
       nextEl: '.swiper-button-next',

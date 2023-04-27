@@ -65,8 +65,11 @@ section {
     padding: 6rem;
     height: calc(100vh);
 }
+.height-fit-content{
+    height: calc(100vh);
+}
 
-.flex-r {
+.flex-r, .flex-r-bg-c-small {
     display: flex;
     flex-direction: row;
 }
@@ -80,6 +83,9 @@ section {
     display: none !important;
 }
 
+.padding-sm-6{
+    padding-top: 0;
+}
 /* ========= BUTTON STYLES ========== */
 
 .small-button{
@@ -216,13 +222,12 @@ h1 span {
 #resume-cta-btn{
     margin-left: 2rem;
 }
-/* ========= Animated Mouse ========== */
+
 .middle{
-    position:absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: none;
 }
+
+/* ========= Animated Mouse ========== */
 
 .animated-mouse{
     width: 24px;
@@ -325,11 +330,9 @@ h1 span {
 #nav-menu-container{
     position: fixed;
     top: 0;
-    width: 380px;
     height: 100%;
     background: white;
     z-index: 2;
-    max-width: 45vw;
     box-sizing: border-box;
     padding: 50px 50px 70px 50px;
 }
@@ -620,4 +623,99 @@ h1 span {
 .social-media-icon:hover{
     height: 90%;
     width: 90%;
+}
+
+/* ========= MEDIA QUERIES ========== */
+/* Small Mobile */
+@media screen and (max-width: 400px){
+    h1{
+        font-size: 2.8rem;
+    }
+    section{
+        padding: 1.5rem;
+    }
+    #sub-headline{
+        font-size: 2rem;
+    }
+    .padding-sm-6{
+        padding-top: 6rem;
+    }
+    .big-button{
+        font-size : 0.9rem;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767px){
+    h1{
+        font-size: 2.9rem;
+    }
+    #sub-headline{
+        font-size: 2rem;
+    }
+    #nav-menu-container{
+        width: calc(100%);
+    }
+    .flex-r-bg-c-small{
+        flex-direction: column;
+    }
+    #about-container p {
+        max-width: 100%;
+        padding: 1.5rem 0 0 0;
+    }
+    .swiper-button-next.orange-nav-next:after, .swiper-button-prev.orange-nav-prev:after{
+        font-size: 15px;
+    }
+    .swiper-button-next.orange-nav-next, .swiper-button-prev.orange-nav-prev{
+        width: 30px;
+        height: 30px;
+        top: 98%;
+    }
+    
+}
+
+/* Tablet */
+@media screen 
+and (min-width: 768px) 
+and (max-width: 1023px){
+    h1{
+        font-size: 3.3rem;
+    }
+    section.flex-r{
+        justify-content: center;
+    }
+    #nav-menu-container{
+        width: 400px;
+    }
+    .slide-container.swiper{
+        width: 750px;
+    }
+}
+
+/* Tablet & Mobile */
+@media screen  
+and (max-width: 1023px){
+    section.height-fit-content{
+        height : fit-content;
+    }
+    #contact-form-container{
+        max-width: 100%;
+    }
+    #skills-container{
+        width : 100%
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1023px) {
+    .middle{
+        position:absolute;
+        top: 80%;
+        display: block;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #nav-menu-container{
+        width: 400px;
+    }
 }

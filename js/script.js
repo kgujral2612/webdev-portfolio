@@ -40,6 +40,7 @@ anchorsBlack.forEach(item => {
 
 
 // ======= NAVBAR ========
+
 var bar0 = document.querySelector("#menu-button-bar-0");
 var bar1 = document.querySelector("#menu-button-bar-1");
 var bar2 = document.querySelector("#menu-button-bar-2");
@@ -47,11 +48,13 @@ var navMenuBtn = document.querySelector("#nav-menu-btn");
 var navMenuContainer = document.querySelector("#nav-menu-container");
 var navMenuItems = document.querySelectorAll(".nav-menu-item");
 
+
+
 navMenuBtn.addEventListener('click', ()=> {
   bar0.style.transform = bar0.style.transform === 'translate(0px, 0px)' ? 'translate(0px, 9px) rotate(45deg)' : 'translate(0px, 0px)';
   bar1.style.opacity = bar1.style.opacity === '1' ? '0' : '1';
   bar2.style.transform = bar2.style.transform === 'translate(0px, 0px)' ? 'translate(0px, -9px) rotate(-45deg)' : 'translate(0px, 0px)';
-  navMenuContainer.style.right = navMenuContainer.style.right === '-380px' ? '0px' : '-380px';
+  navMenuContainer.style.right = navMenuContainer.style.right === '-400px' ? '0px' : '-400px';
 })
 
 for (var i = 0; i < navMenuItems.length; i++) {

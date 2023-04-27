@@ -124,4 +124,3 @@ menuItems.forEach((el) => {
   var element = document.querySelector(el);
   navLinkHighlight.observe(element);
 });
-

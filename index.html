@@ -282,7 +282,7 @@
                   <textarea id="contact-message-input-field"></textarea>
                 </div>
                 <div id="contact-button-container" class="flex-r">
-                  <div id="contact-submit-button" class="small-button orange-hover anchor">Connect</div>
+                  <div type="submit" id="contact-submit-button" class="small-button orange-hover anchor" onclick="sendEmail()">Connect</div>
                 </div>
               </div>
             </div>
@@ -317,5 +317,19 @@
     <script defer src="./js/script.js"></script>
     <script defer src="./js/typing-effect.js"></script>
     <script defer src="./js/swiper.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail(){
+        Email.send({
+          SecureToken : "594567ed-d157-4434-9d38-985fe4884add",
+          To : 'connect2kaushambi@gmail.com',
+          From : "kgujral@pdx.edu",
+          Subject : "Message from "+ document.querySelector('#contact-name-input-field').value,
+          Body : document.querySelector('#contact-message-input-field').value + "\n" + document.querySelector('#contact-email-input-field').value
+      }).then(
+        message => alert(message)
+      );
+    }
+    </script>
 </body>
 </html>

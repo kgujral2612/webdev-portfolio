@@ -64,7 +64,7 @@ section {
     padding: 6rem 6rem 0 6rem;
     height: fit-content;
 }
-.height-fit-content{
+.height-full{
     height: calc(100vh);
 }
 
@@ -695,9 +695,6 @@ and (max-width: 1023px){
 /* Tablet & Mobile */
 @media screen  
 and (max-width: 1023px){
-    section.height-fit-content{
-        height : fit-content;
-    }
     #contact-form-container{
         max-width: 100%;
     }
@@ -734,12 +731,15 @@ and (max-width: 1023px){
 @media screen and (min-width: 1023px) {
     .middle{
         position:absolute;
-        bottom: 0;
+        top: calc(78vh);
         display: block;
         left: 50%;
         transform: translate(-50%, -50%);
     }
     #nav-menu-container{
         width: 400px;
+    }
+    .slide-container{
+        height: 730px;
     }
 }

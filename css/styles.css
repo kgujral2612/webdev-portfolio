@@ -623,6 +623,11 @@ h1 span {
         padding: 15px 20px;
         border-radius: 26px;
     }
+    #about-container > img{
+        width: 200px;
+        height: 200px;
+        margin: 1rem;
+    }
 }
 
 /* Mobile */

@@ -1,4 +1,4 @@
-// ======= CURSOR ANIMATINO ========
+// ======= CURSOR ANIMATION ========
 var cursor = document.querySelector('.cursor');
 var cursorInner = document.querySelector('.inner-cursor');
 var anchors = document.querySelectorAll('.anchor');

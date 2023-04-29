@@ -382,7 +382,7 @@ h1 span {
 }
 
 .slide-transition{
-    transition: left .9s cubic-bezier(.6, 0, .4, 1), right .9s cubic-bezier(.6, 0, .4, 1);
+    transition: left .6s cubic-bezier(.6, 0, .4, 1), right .6s cubic-bezier(.6, 0, .4, 1);
 }
 
 /* ========= SKILLS ========== */

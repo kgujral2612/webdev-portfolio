@@ -57,10 +57,19 @@ navMenuBtn.addEventListener('click', ()=> {
   navMenuContainer.style.right = navMenuContainer.style.right === -navWidth + 'px' ? '0px' : -navWidth + 'px';
 })
 
+function closeWindow() {
+  bar0.style.transform = 'translate(0px, 9px) rotate(45deg)';
+  bar1.style.opacity = '0' ;
+  bar2.style.transform = 'translate(0px, -9px) rotate(-45deg)' ;
+  navMenuContainer.style.right = -navWidth + 'px';
+}
 for (var i = 0; i < navMenuItems.length; i++) {
   (function(index) {
     navMenuItems[index].addEventListener("click", function() {
       makeActive(navMenuItems[index]);
+      if(window.innerWidth <= 500 ){
+        closeWindow();
+      }
     })
   })(i);
 }
@@ -118,13 +127,14 @@ animatedMouse.addEventListener("click", function(){
 const navLinkHighlight = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
-      const elId = entry.target.id;
-      var navItem = document.querySelector("a[href='#" + elId + "']");
+      var elId = entry.target.id;
+      elId = elId == "footer" ? "contact" : elId; 
+      var navItem = navMenuContainer.querySelector("a[href='#" + elId + "']");
       makeActive(navItem);
     }
   });
 });
-const menuItems = ["#home", "#about", "#work", "#skills", "#contact"];
+const menuItems = ["#home", "#about", "#work", "#skills", "#contact", "#footer"];
 menuItems.forEach((el) => {
   var element = document.querySelector(el);
   navLinkHighlight.observe(element);

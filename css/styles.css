@@ -385,6 +385,65 @@ h1 span {
     transition: left .6s cubic-bezier(.6, 0, .4, 1), right .6s cubic-bezier(.6, 0, .4, 1);
 }
 
+/* ========= EXP ========== */
+.laptop{
+    
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+}
+
+.deals-page{
+    left: 40px;
+    top: 10px;
+    z-index: -1;
+}
+.exp-heading{
+    justify-content: flex-start;
+    padding: 1rem 0 1rem 0;
+}
+.exp-heading>img{
+    margin-right: 1rem;
+}
+.exp-heading>span{
+    margin-left: 2rem;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 2;
+}
+ul.exp-tasks {
+    line-height: 1.5em;
+    margin: 5px 0 15px;
+    padding: 0;
+  }
+  
+li {
+    list-style: none;
+    position: relative;
+    padding: 0 0 0.5rem 2.5rem;
+}
+
+li.circle-checkmark::before {
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    top: 2px; 
+    border: solid 8px var(--color-accent);
+    border-radius: 8px;
+  }
+  
+  li.circle-checkmark::after {
+    content: ""; 
+    position: absolute; 
+    left: 5px;
+    top: 5px;
+    width: 3px;
+    height: 6px;
+    border: solid var(--color-white);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
 /* ========= SKILLS ========== */
 #skills-container{
     width: 50%;
@@ -628,6 +687,11 @@ h1 span {
         height: 200px;
         margin: 1rem;
     }
+    .exp-img{
+        width: calc(50vh);
+        height: calc(35vh);
+    }
+    
 }
 
 /* Mobile */
@@ -708,6 +772,15 @@ and (max-width: 1023px){
     }
     .inner-cursor, .cursor{
         display: none;
+    }
+    .flex-r-bg-c-small{
+        flex-direction: column;
+    }
+    #about-container.flex-r-bg-c-small{
+        flex-direction: column-reverse;
+    }
+    .view-cta-btn{
+        margin:auto;
     }
 }
 

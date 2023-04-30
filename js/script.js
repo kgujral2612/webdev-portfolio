@@ -139,3 +139,19 @@ menuItems.forEach((el) => {
   var element = document.querySelector(el);
   navLinkHighlight.observe(element);
 });
+
+//===================================================
+// ============= Click Sound  =============
+//===================================================
+
+var clickSound= document.querySelector("#click-sound");
+var navButtons = document.querySelector("#navigation-container").querySelectorAll("div");
+
+navButtons.forEach((el)=> {
+  el.addEventListener("click", ()=>{
+    clickSound.play();
+  });
+});
+
+
+

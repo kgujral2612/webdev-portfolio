@@ -95,6 +95,9 @@ section {
 .padding-bottom-6{
     padding-bottom: 6rem;
 }
+audio{
+    display: none;
+}
 /* ========= BUTTON STYLES ========== */
 
 .small-button{

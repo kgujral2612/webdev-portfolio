@@ -160,5 +160,23 @@ navButtons.forEach((el)=> {
   });
 });
 
+//===================================================
+// ============= Paint Splash Transition  ===========
+//===================================================
 
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 1000 );
+}
 
+document.querySelector("#get-in-touch-cta-btn").addEventListener("click", ()=> paintSplashTransition());
+
+const paintSplashTransition = () => {
+  var transitionContainer = document.querySelector("#transition-container");
+  transitionContainer.classList.remove("hide");
+  transitionContainer.classList.remove("hideTopTransition");
+  transitionContainer.classList.add("showTransition");
+  setTimeout(() => {  
+    transitionContainer.classList.remove("showTransition");
+  transitionContainer.classList.add("hideTopTransition");
+  }, 1000);
+}

@@ -39,7 +39,6 @@ anchorsBlack.forEach(item => {
 
 
 // ======= NAVBAR ========
-
 var bar0 = document.querySelector("#menu-button-bar-0");
 var bar1 = document.querySelector("#menu-button-bar-1");
 var bar2 = document.querySelector("#menu-button-bar-2");
@@ -47,8 +46,16 @@ var navMenuBtn = document.querySelector("#nav-menu-btn");
 var navMenuContainer = document.querySelector("#nav-menu-container");
 var navMenuItems = document.querySelectorAll(".nav-menu-item");
 var navWidth = navMenuContainer.offsetWidth;
-navMenuContainer.style.right = -navWidth + 'px';
 
+function navMenuPosition(){
+  navWidth = navMenuContainer.offsetWidth;
+  navMenuContainer.style.right = -navWidth + 'px';
+}
+navMenuPosition();
+
+window.addEventListener("resize", ()=> {
+  navMenuPosition();
+});
 
 navMenuBtn.addEventListener('click', ()=> {
   bar0.style.transform = bar0.style.transform === 'translate(0px, 0px)' ? 'translate(0px, 9px) rotate(45deg)' : 'translate(0px, 0px)';
@@ -58,9 +65,9 @@ navMenuBtn.addEventListener('click', ()=> {
 })
 
 function closeWindow() {
-  bar0.style.transform = 'translate(0px, 9px) rotate(45deg)';
-  bar1.style.opacity = '0' ;
-  bar2.style.transform = 'translate(0px, -9px) rotate(-45deg)' ;
+  bar0.style.transform = 'translate(0px, 0px)';
+  bar1.style.opacity = '1' ;
+  bar2.style.transform = 'translate(0px, 0px)' ;
   navMenuContainer.style.right = -navWidth + 'px';
 }
 for (var i = 0; i < navMenuItems.length; i++) {

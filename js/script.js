@@ -2,7 +2,8 @@
 var cursor = document.querySelector('.cursor');
 var cursorInner = document.querySelector('.inner-cursor');
 var anchors = document.querySelectorAll('.anchor');
-var anchorsBlack = document.querySelectorAll('.anchor-white');
+var anchorsWhite = document.querySelectorAll('.anchor-white');
+var anchorsDark = document.querySelectorAll('.anchor-dark');
 
 document.addEventListener('mousemove', function(e){
   cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
@@ -26,7 +27,7 @@ anchors.forEach(item => {
   });
 })
 
-anchorsBlack.forEach(item => {
+anchorsWhite.forEach(item => {
   item.addEventListener('mouseover', () => {
     cursor.classList.add('hover-white');
     cursorInner.classList.add('inner-hover');
@@ -37,7 +38,16 @@ anchorsBlack.forEach(item => {
   });
 })
 
-
+anchorsDark.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    cursor.classList.add('cursor-small-dark');
+    cursorInner.classList.add('inner-cursor-dark');
+  });
+  item.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor-small-dark');
+    cursorInner.classList.remove('inner-cursor-dark');
+  });
+})
 // ======= NAVBAR ========
 var bar0 = document.querySelector("#menu-button-bar-0");
 var bar1 = document.querySelector("#menu-button-bar-1");
@@ -153,7 +163,7 @@ menuItems.forEach((el) => {
 // swiper js, swiper css, and click sound
 //===================================================
 
-const workSection = document.querySelector("#about")
+const workSection = document.querySelector("#work")
 
 const makeClickSound = () => {
   var clickSound= document.querySelector("#click-sound");

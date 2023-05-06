@@ -69,7 +69,7 @@ section {
 }
 
 #about, #skills {
-    background-color: var(--color-accent);
+    background-color: var(--color-v-light-orange);
     color: var(--color-black);
 }
 .height-full{
@@ -166,6 +166,13 @@ audio{
     z-index: 1001;
     pointer-events: none;
     transition: width .3s, height .3s, opacity .3s;
+}
+
+.cursor-small-dark{
+    border-color: var(--color-dark-gray);
+}
+.inner-cursor-dark{
+    background-color: var(--color-dark-gray);
 }
   
 .hover {

@@ -149,15 +149,45 @@ menuItems.forEach((el) => {
 
 
 //===================================================
-// ============= Lazy Load Script  =============
+// ============= Lazy Load Swiper  =============
+// swiper js, swiper css, and click sound
 //===================================================
-const workSection = document.querySelector("#home")
 
+const workSection = document.querySelector("#about")
+
+const makeClickSound = () => {
+  var clickSound= document.querySelector("#click-sound");
+  var navButtons = document.querySelector("#navigation-container").querySelectorAll("div");
+
+  navButtons.forEach((el)=> {
+    el.addEventListener("click", ()=>{
+      clickSound.play();
+    });
+  });
+
+};
 const lazyLoad = () => {
   const scriptTag = document.createElement('script'); 
   scriptTag.src = "./js/swiper.js";
-  const body = document.querySelector("body")
+  const body = document.querySelector("body");
+
+  const styleTag = document.createElement('link');
+  styleTag.href = './css/swiper.css';
+  styleTag.rel = 'stylesheet';
+  styleTag.type = 'text/css';
+
+  const audioTag = document.createElement('audio');
+  audioTag.id = "click-sound";
+  const audioSrc = document.createElement('source');
+  audioSrc.src = "./assets/project/clicksound.mp3";
+  audioSrc.type="audio/mpeg";
+  audioTag.appendChild(audioSrc);
+
   body.appendChild(scriptTag);
+  body.appendChild(styleTag);
+  body.appendChild(audioTag);
+
+  makeClickSound();
 }
 
 let observer = new IntersectionObserver(function(entries) {
@@ -171,18 +201,24 @@ let observer = new IntersectionObserver(function(entries) {
 observer.observe(workSection)
 
 //===================================================
-// ============= Click Sound  =============
+// ============= Lazy Load Images  =============
 //===================================================
 
-var clickSound= document.querySelector("#click-sound");
-var navButtons = document.querySelector("#navigation-container").querySelectorAll("div");
-
-navButtons.forEach((el)=> {
-  el.addEventListener("click", ()=>{
-    clickSound.play();
+var lazyImages = document.querySelectorAll(".lazy-img");
+let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.classList.remove("lazy-img");
+          lazyImageObserver.unobserve(lazyImage);
+      }
   });
 });
-
+/** Now observe all the non-loaded images using the observer we have setup above **/
+lazyImages.forEach(function(lazyImage) {
+  lazyImageObserver.observe(lazyImage);
+});
 
 //===================================================
 // ============= Send Email  =============

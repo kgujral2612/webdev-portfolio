@@ -23,12 +23,14 @@ html{
 :root {
     --color-primary: white;
     --color-accent: #FF923E;
+    --color-v-light-orange: #FFD1AD;
     --color-light-orange: #ff9b4f;
     --color-dark-orange: #ff8426;
     --color-v-dark-orange: #f76b00;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-light-beige: #F5EFE6;
+    --color-dark-gray: #424242;
     --color-gray: #7C8594;
     --color-almost-black: #091434;
     --color-highlight-yellow: #FFB800;
@@ -38,10 +40,11 @@ html{
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: var(--color-light-beige);
-    color: var(--color-black);
     line-height: 1.7;
+    background: var(--color-dark-gray);
+    color: var(--color-white);
 }
+
 
 /* ========= GENERAL STYLES ========== */
 
@@ -61,8 +64,13 @@ h5, .ps {
 }
 
 section {
-    padding: 6rem 6rem 0 6rem;
+    padding: 6rem;
     height: fit-content;
+}
+
+#about, #skills {
+    background-color: var(--color-accent);
+    color: var(--color-black);
 }
 .height-full{
     height: calc(100vh);
@@ -104,7 +112,7 @@ audio{
     margin-left: auto;
     font-size: 1rem;
     padding: 9px 36px;
-    color: white;
+    color: var(--color-black);
     border-radius: 13px;
     font-weight: 600;
     cursor: pointer;
@@ -127,7 +135,7 @@ audio{
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
-    color: white;
+    color: var(--color-black);
     width: max-content;
 }
 
@@ -219,7 +227,7 @@ h1 span {
 }
 
 .orange-highlight{
-  color: var(--color-dark-orange);
+  color: var(--color-v-light-orange);
   font-weight: 700;
 }
 
@@ -244,7 +252,7 @@ h1 span {
 .animated-mouse{
     width: 24px;
     height: 38px;
-    border: 3px solid var(--color-almost-black);
+    border: 3px solid var(--color-white);
     border-radius: 12px;
     box-sizing: border-box;
 }
@@ -255,7 +263,7 @@ h1 span {
     height: 10px;
     position: absolute;
     top: 30px;
-    background-color: var(--color-almost-black);
+    background-color: var(--color-white);
     left: 50%;
     transform: translateX(-50%);
     border-radius: 5px;
@@ -326,7 +334,7 @@ h1 span {
 .menu-button-bar{
     width: 26px;
     height: 4px;
-    background: white;
+    background: var(--color-dark-gray);
     margin: 2.5px;
     border-radius: 2px;
     transition: transform 250ms ease-in-out;
@@ -486,6 +494,9 @@ li.circle-checkmark::before {
     flex: 1;
 }
 
+h2.title{
+    color: var(--color-black);
+}
 .image-content{
     padding: 1rem;
 }
@@ -514,7 +525,7 @@ li.circle-checkmark::before {
 
 .swiper-button-next.orange-nav-next, .swiper-button-prev.orange-nav-prev{
     top: 93.5%;
-    color: var(--color-white);
+    color: var(--color-black);
     width: 50px;
     height: 50px;
     -moz-border-radius: 70px;
@@ -633,6 +644,10 @@ li.circle-checkmark::before {
 
 
 /* ========= FOOTER ========== */
+
+#footnote {
+    color: var(--color-black);
+}
 #footer{
     text-align: center;
     font-size: 1.05em;
@@ -640,8 +655,7 @@ li.circle-checkmark::before {
     background: var(--color-accent);
     position: relative;
 }
-.highlight-white{
-    color : var(--color-white);
+.highlight-black{
     font-weight: 600;
 }
 

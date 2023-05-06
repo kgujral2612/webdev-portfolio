@@ -147,6 +147,29 @@ menuItems.forEach((el) => {
   navLinkHighlight.observe(element);
 });
 
+
+//===================================================
+// ============= Lazy Load Script  =============
+//===================================================
+const workSection = document.querySelector("#home")
+
+const lazyLoad = () => {
+  const scriptTag = document.createElement('script'); 
+  scriptTag.src = "./js/swiper.js";
+  const body = document.querySelector("body")
+  body.appendChild(scriptTag);
+}
+
+let observer = new IntersectionObserver(function(entries) {
+  if (entries[0].isIntersecting) {
+    setTimeout(function() {
+      lazyLoad()
+    }, 500)
+    observer.unobserve(workSection)
+  }
+});
+observer.observe(workSection)
+
 //===================================================
 // ============= Click Sound  =============
 //===================================================

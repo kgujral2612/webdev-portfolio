@@ -166,7 +166,7 @@ const makeClickSound = () => {
   });
 
 };
-const lazyLoad = () => {
+const lazyLoadCarousel = () => {
   const scriptTag = document.createElement('script'); 
   scriptTag.src = "./js/swiper.js";
   const body = document.querySelector("body");
@@ -193,7 +193,7 @@ const lazyLoad = () => {
 let observer = new IntersectionObserver(function(entries) {
   if (entries[0].isIntersecting) {
     setTimeout(function() {
-      lazyLoad()
+      lazyLoadCarousel()
     }, 500)
     observer.unobserve(workSection)
   }
@@ -223,15 +223,35 @@ lazyImages.forEach(function(lazyImage) {
 //===================================================
 // ============= Send Email  =============
 //===================================================
-var emailBtn = document.querySelector("#contact-submit-button");
-emailBtn.addEventListener("onClick", ()=> {
-  Email.send({
-    SecureToken : "594567ed-d157-4434-9d38-985fe4884add",
-    To : 'connect2kaushambi@gmail.com',
-    From : "kgujral@pdx.edu",
-    Subject : "Message from "+ document.querySelector('#contact-name-input-field').value,
-    Body : document.querySelector('#contact-message-input-field').value + "\n" + document.querySelector('#contact-email-input-field').value
-}).then(
-  message => alert(message)
-);
+
+const lazyLoadEmail = () => {
+  //add smtp script tag
+  const smtpScriptTag = document.createElement('script'); 
+  smtpScriptTag.src = "https://smtpjs.com/v3/smtp.js";
+  const body = document.querySelector("body");
+  body.appendChild(smtpScriptTag);
+  //add event listener
+  var emailBtn = document.querySelector("#contact-submit-button");
+  emailBtn.addEventListener("click", function() {
+    Email.send({
+      SecureToken : "594567ed-d157-4434-9d38-985fe4884add",
+      To : 'connect2kaushambi@gmail.com',
+      From : "kgujral@pdx.edu",
+      Subject : "Message from "+ document.querySelector('#contact-name-input-field').value,
+      Body : document.querySelector('#contact-message-input-field').value + "\n" + document.querySelector('#contact-email-input-field').value
+    }).then(
+    message => alert(message)
+    );
+  });
+
+}
+const contactSection = document.querySelector("#contact")
+let contactObserver = new IntersectionObserver(function(entries) {
+  if (entries[0].isIntersecting) {
+    setTimeout(function() {
+      lazyLoadEmail();
+    }, 500)
+    contactObserver.unobserve(contactSection)
+  }
 });
+contactObserver.observe(contactSection)

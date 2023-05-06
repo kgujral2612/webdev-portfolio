@@ -560,7 +560,7 @@ li.circle-checkmark::before {
 }
 
 .tech-tag{
-    font-size: .65rem;
+    font-size: 11px;
     padding: 1px 7px;
     margin-right: 5px;
     color: white;

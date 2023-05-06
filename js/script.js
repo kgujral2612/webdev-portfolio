@@ -161,4 +161,18 @@ navButtons.forEach((el)=> {
 });
 
 
-
+//===================================================
+// ============= Send Email  =============
+//===================================================
+var emailBtn = document.querySelector("#contact-submit-button");
+emailBtn.addEventListener("onClick", ()=> {
+  Email.send({
+    SecureToken : "594567ed-d157-4434-9d38-985fe4884add",
+    To : 'connect2kaushambi@gmail.com',
+    From : "kgujral@pdx.edu",
+    Subject : "Message from "+ document.querySelector('#contact-name-input-field').value,
+    Body : document.querySelector('#contact-message-input-field').value + "\n" + document.querySelector('#contact-email-input-field').value
+}).then(
+  message => alert(message)
+);
+});

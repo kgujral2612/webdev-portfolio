@@ -17,9 +17,9 @@
         <section id="home" class="hidden flex-c mt-8-rem padding-bottom-6 height-full">
             <div id="home-info-container" class="flex-c">
               <h1>Hi, my name <br/> is Kaushambi Gujral</h1>
-              <h3 id="sub-headline">I'm
+              <h2 id="sub-headline">I'm
                 <span class="orange-highlight" id="typed-text"></span><span id="typing-cursor">&nbsp;</span>
-              </h3>
+              </h2>
               <div class="flex-r padding-sm-6">
                 <div id="get-in-touch-cta-btn" class="big-button orange-hover anchor"><a href="#contact">Get in touch</a></div>
                 <div id="resume-cta-btn" class="big-button orange-hover anchor"><a target="_blank" href="https://docs.google.com/document/d/1aeoVgsKdCf9K7wsFWgu5yLTi77cUjdn-ZX1wzM3INMs/edit?usp=sharing">Download Resume</a></div>
@@ -33,7 +33,7 @@
         
         <!-- NAV -->   
         <div>
-            <div id="nav" class="flex-r">
+            <div id="nav" class="flex-r" role="banner">
               <div id="nav-logo" class="anchor"><img alt="An Image of the website's Logo" src = "./assets/logo-k.png" width="50px" height="50px"/></div>
               <div id="nav-menu-btn" class="menu-icon flex-c orange-hover anchor">
                 <div id="menu-button-bar-0" class="menu-button-bar" style = "transform: translate(0px, 0px)"></div>
@@ -41,7 +41,7 @@
                 <div id="menu-button-bar-2" class="menu-button-bar" style = "transform: translate(0px, 0px)"></div>
               </div>
             </div>
-              <div id="nav-menu-container" class="slide-transition">
+              <nav id="nav-menu-container" class="slide-transition">
                 <div id="nav-menu-content" class="flex-c">
                   <a class="nav-menu-item active" href="#home"><span>Home</span></a>
                   <a class="nav-menu-item" href="#about"><span>About</span></a>
@@ -49,7 +49,7 @@
                   <a class="nav-menu-item" href="#work"><span>Work</span></a>
                   <a class="nav-menu-item" href="#contact"><span>Contact</span></a>
                 </div>
-              </div>
+              </nav>
             </div>
 
         <!-- ABOUT --> 
@@ -96,7 +96,7 @@
             <div>
               <div class="flex-r exp-heading">
                 <img src="./assets/industry/delllogo.png" alt="Dell Icon" width="40" height="40">
-                <h3>Software Engineer</h3>
+                <h2>Software Engineer</h2>
                 <span>10/2018-12/2022</span>
               </div>
               <div>
@@ -156,7 +156,7 @@
           <div class="container">
             <h1>Work</h1>
             <hr/>
-            <h5>Projects I've worked on 👩🏻‍💻</h5>
+            <p class="ps">Projects I've worked on 👩🏻‍💻</p>
           </div>
           <div class="slide-container swiper">
             <div class="slide-content swiper-wrapper">
@@ -308,7 +308,7 @@
             <div class="container">
               <h1>Contact me</h1>
               <hr/>
-              <h5>Say hello 👋</h5>
+              <p class="ps">Say hello 👋</p>
               <span>Get in touch or shoot me an email directly at <a href="mailto:kgujral@pdx.edu" class="anchor orange-highlight">kgujral@pdx.edu</a></span>
             </div>
         
@@ -336,7 +336,7 @@
                   <textarea id="contact-message-input-field"></textarea>
                 </div>
                 <div id="contact-button-container" class="flex-r">
-                  <div type="submit" id="contact-submit-button" class="small-button orange-hover anchor" onclick="sendEmail()">Connect</div>
+                  <div type="submit" id="contact-submit-button" class="small-button orange-hover anchor">Connect</div>
                 </div>
               </div>
             </div>
@@ -371,22 +371,9 @@
     <audio controls id="click-sound">
       <source src="./assets/project/clicksound.mp3" type="audio/mpeg">
     </audio>
-    <script defer src="./js/script.js"></script>
     <script defer src="./js/typing-effect.js"></script>
     <script defer src="./js/swiper.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail(){
-        Email.send({
-          SecureToken : "594567ed-d157-4434-9d38-985fe4884add",
-          To : 'connect2kaushambi@gmail.com',
-          From : "kgujral@pdx.edu",
-          Subject : "Message from "+ document.querySelector('#contact-name-input-field').value,
-          Body : document.querySelector('#contact-message-input-field').value + "\n" + document.querySelector('#contact-email-input-field').value
-      }).then(
-        message => alert(message)
-      );
-    }
-    </script>
+    <script defer src="./js/script.js"></script>
 </body>
 </html>

@@ -32,7 +32,7 @@ html{
     --color-light-beige: #F5EFE6;
     --color-dark-gray: #424242;
     --color-gray: #7C8594;
-    --color-almost-black: #091434;
+    --color-almost-black: #3c3c3b;
     --color-highlight-yellow: #FFB800;
     --color-highlight-purple: #8433CC;
 
@@ -107,6 +107,8 @@ section {
 audio{
     display: none;
 }
+
+
 /* ========= BUTTON STYLES ========== */
 
 .small-button{

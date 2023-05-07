@@ -221,6 +221,8 @@ let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
           let lazyImage = entry.target;
           lazyImage.src = lazyImage.dataset.src;
           lazyImage.classList.remove("lazy-img");
+          lazyImage.classList.remove("lazy-img-hide");
+          lazyImage.classList.add("lazy-img-show");
           lazyImageObserver.unobserve(lazyImage);
       }
   });

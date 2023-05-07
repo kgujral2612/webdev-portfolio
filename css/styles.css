@@ -158,6 +158,37 @@ audio{
         opacity: 1;
     }
 }
+section.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform : translateX(-100%);
+    transition: all 1s;
+}
+
+section.show{
+    opacity: 1;
+    filter:blur(0);
+    transform: translateX(0);
+}
+
+.slide-up{
+    opacity: 0;
+    transform : translateY(10%);
+    filter: blur(5px);
+    transition: all 1s;
+}
+.slide-complete{
+    opacity: 1;
+    filter:blur(0);
+    transform : translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+    section.hidden{
+        transition: none;
+    }
+}
+
 /* ========= CURSOR STYLES ========== */
 
 .cursor {
@@ -210,24 +241,6 @@ audio{
     border: 5px solid white;
 }
 
-section.hidden{
-    opacity: 0;
-    filter: blur(5px);
-    transform : translateX(-100%);
-    transition: all 1s;
-}
-
-section.show{
-    opacity: 1;
-    filter:blur(0);
-    transform: translateX(0);
-}
-
-@media(prefers-reduced-motion) {
-    section.hidden{
-        transition: none;
-    }
-}
 /* ========= DIVIDER STYLES ========== */
 .wave-divider-orange-bottom {
     position: absolute;

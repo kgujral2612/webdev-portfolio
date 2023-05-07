@@ -124,7 +124,7 @@ window.addEventListener('scroll',function(){
 // ============= Intersection observer  =============
 //===================================================
 
-// Lazy load animations
+// Section show and hide animations
 const hiddenElements = document.querySelectorAll('.hidden');
 const showingObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry)=> {
@@ -134,6 +134,16 @@ const showingObserver = new IntersectionObserver((entries) => {
   });
 });
 hiddenElements.forEach((el)=> showingObserver.observe(el));
+
+const slideUpElements = document.querySelectorAll(".slide-up");
+const slidingObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry)=> {
+      if(entry.isIntersecting){
+        entry.target.classList.add('slide-complete');
+      }
+  });
+});
+slideUpElements.forEach((el)=> slidingObserver.observe(el));
 
 const animatedMouse = document.querySelector(".animated-mouse");
 animatedMouse.addEventListener("click", function(){

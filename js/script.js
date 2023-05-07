@@ -129,7 +129,7 @@ const hiddenElements = document.querySelectorAll('.slide-in');
 const showingObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry)=> {
       if(entry.isIntersecting){
-        entry.target.classList.add('show');
+        entry.target.classList.add('slide-in-complete');
       }
   });
 });
@@ -148,6 +148,13 @@ slideUpElements.forEach((el)=> slidingObserver.observe(el));
 const animatedMouse = document.querySelector(".animated-mouse");
 animatedMouse.addEventListener("click", function(){
   document.getElementById("about").scrollIntoView({behavior: 'smooth'});
+});
+
+// Nav container must remain hidden until page load
+addEventListener('load', (event) => {
+  console.log('The page is fully loaded.');
+  navMenuContainer.classList.remove("hidden");
+  navMenuContainer.classList.add("show");
 });
 
 // Nav Link Highlight As You Scroll

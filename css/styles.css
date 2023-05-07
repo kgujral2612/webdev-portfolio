@@ -165,7 +165,7 @@ section.slide-in{
     transition: all 1s;
 }
 
-section.show{
+section.slide-in-complete{
     opacity: 1;
     filter:blur(0);
     transform: translateX(0);
@@ -188,7 +188,12 @@ section.show{
         transition: none;
     }
 }
-
+.hidden {
+    opacity: 0;
+}
+.show {
+    opacity: 1;
+}
 /* ========= CURSOR STYLES ========== */
 
 .cursor {

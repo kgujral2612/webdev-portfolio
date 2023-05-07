@@ -125,7 +125,7 @@ window.addEventListener('scroll',function(){
 //===================================================
 
 // Section show and hide animations
-const hiddenElements = document.querySelectorAll('.hidden');
+const hiddenElements = document.querySelectorAll('.slide-in');
 const showingObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry)=> {
       if(entry.isIntersecting){

@@ -158,7 +158,7 @@ audio{
         opacity: 1;
     }
 }
-section.hidden{
+section.slide-in{
     opacity: 0;
     filter: blur(5px);
     transform : translateX(-100%);
@@ -184,7 +184,7 @@ section.show{
 }
 
 @media(prefers-reduced-motion) {
-    section.hidden{
+    section.slide-in{
         transition: none;
     }
 }

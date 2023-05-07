@@ -23,7 +23,7 @@ html{
 :root {
     --color-primary: white;
     --color-accent: #FF923E;
-    --color-v-light-orange: #FFD1AD;
+    --color-v-light-orange: #FF923E;
     --color-light-orange: #ff9b4f;
     --color-dark-orange: #ff8426;
     --color-v-dark-orange: #f76b00;
@@ -210,12 +210,8 @@ section.show{
         transition: none;
     }
 }
-
-/* ========= HOME ========== */
-#home-info-svg{
-    max-width: 70%;
-}
-.wave-divider-light-orange {
+/* ========= DIVIDER STYLES ========== */
+.wave-divider-orange-bottom {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -225,15 +221,41 @@ section.show{
     transform: rotate(180deg);
 }
 
-.wave-divider-light-orange svg {
+.wave-divider-orange-bottom svg {
     position: relative;
     display: block;
     width: calc(121% + 1.3px);
     height: 120px;
 }
 
-.wave-divider-light-orange .shape-fill {
-    fill: #FFD1AD;
+.wave-divider-orange-bottom .shape-fill {
+    fill: var(--color-accent);
+}
+
+
+.wave-divider-orange-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-divider-orange-top svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 59px;
+}
+
+.wave-divider-orange-top .shape-fill {
+    fill: #FF923E;
+}
+
+/* ========= HOME ========== */
+#home-info-svg{
+    max-width: 70%;
 }
 .custom-shape-divider-top-1683418919 {
     position: absolute;
@@ -518,7 +540,6 @@ li.circle-checkmark::before {
 }
 
 /* ========= WORK ========== */
-
 .card{
     background: white;
     border-radius: 20px;
@@ -640,27 +661,6 @@ h2.title{
 }
 
 /* ========= CONTACT ========== */
-.wave-orange {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.wave-orange svg {
-    position: relative;
-    display: block;
-    width: calc(135% + 1.3px);
-    height: 120px;
-    transform: rotateY(180deg);
-}
-
-.wave-orange .shape-fill {
-    fill: #FF923E;
-}
 .container > hr {
     width: 40px;
     background-color: #FF923E;
@@ -817,8 +817,8 @@ h2.title{
     .card-content{
         padding: 0 8px;
     }
-    .wave-orange svg, .wave-divider-light-orange svg{
-        height: 50px;
+    .wave-divider-orange-top svg, .wave-divider-orange-bottom svg{
+        height: 30px;
     }
 }
 

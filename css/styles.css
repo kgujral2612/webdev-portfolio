@@ -66,6 +66,7 @@ h5, .ps {
 section {
     padding: 6rem;
     height: fit-content;
+    position: relative;
 }
 
 #about, #skills {
@@ -73,7 +74,7 @@ section {
     color: var(--color-black);
 }
 .height-full{
-    height: calc(100vh);
+    height: calc(90vh);
 }
 
 .flex-r, .flex-r-bg-c-small {
@@ -213,6 +214,45 @@ section.show{
 /* ========= HOME ========== */
 #home-info-svg{
     max-width: 70%;
+}
+.wave-divider-light-orange {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-divider-light-orange svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 120px;
+}
+
+.wave-divider-light-orange .shape-fill {
+    fill: #FFD1AD;
+}
+.custom-shape-divider-top-1683418919 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1683418919 svg {
+    position: relative;
+    display: block;
+    width: calc(121% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-top-1683418919 .shape-fill {
+    fill: #373636;
 }
 
 .headline{
@@ -600,6 +640,27 @@ h2.title{
 }
 
 /* ========= CONTACT ========== */
+.wave-orange {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave-orange svg {
+    position: relative;
+    display: block;
+    width: calc(135% + 1.3px);
+    height: 120px;
+    transform: rotateY(180deg);
+}
+
+.wave-orange .shape-fill {
+    fill: #FF923E;
+}
 .container > hr {
     width: 40px;
     background-color: #FF923E;
@@ -755,6 +816,9 @@ h2.title{
     }
     .card-content{
         padding: 0 8px;
+    }
+    .wave-orange svg, .wave-divider-light-orange svg{
+        height: 50px;
     }
 }
 

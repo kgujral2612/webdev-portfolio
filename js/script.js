@@ -253,7 +253,9 @@ lazyImages.forEach(function(lazyImage) {
 // ============= Send Email  =============
 //===================================================
 
+
 const lazyLoadEmail = () => {
+  var note = document.querySelector("#notification");
   //add smtp script tag
   const smtpScriptTag = document.createElement('script'); 
   smtpScriptTag.src = "https://smtpjs.com/v3/smtp.js";
@@ -262,17 +264,25 @@ const lazyLoadEmail = () => {
   //add event listener
   var emailBtn = document.querySelector("#contact-submit-button");
   emailBtn.addEventListener("click", function() {
-    Email.send({
-      SecureToken : "594567ed-d157-4434-9d38-985fe4884add",
-      To : 'connect2kaushambi@gmail.com',
-      From : "kgujral@pdx.edu",
-      Subject : "Message from "+ document.querySelector('#contact-name-input-field').value,
-      Body : document.querySelector('#contact-message-input-field').value + "\n" + document.querySelector('#contact-email-input-field').value
-    }).then(
-    message => alert(message)
-    );
+    const name = document.querySelector('#contact-name-input-field').value;
+    const email = document.querySelector('#contact-email-input-field').value;
+    const message = document.querySelector('#contact-message-input-field').value;
+    if(name && message && email){
+      Email.send({
+        SecureToken : "594567ed-d157-4434-9d38-985fe4884add",
+        To : 'connect2kaushambi@gmail.com',
+        From : "kgujral@pdx.edu",
+        Subject : "Message from "+ name,
+        Body : message + "\n" + email
+      }).then(
+      message => alert(message)
+      );
+      note.innerHTML = "Message sent successfully!";
+    }
+    else {
+      note.innerHTML = "Please fill in all the details!";
+    }
   });
-
 }
 const contactSection = document.querySelector("#contact")
 let contactObserver = new IntersectionObserver(function(entries) {

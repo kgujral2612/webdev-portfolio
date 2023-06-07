@@ -78,7 +78,7 @@ section {
   color: var(--color-black);
 }
 .height-full {
-  height: calc(90vh);
+  height: calc(97vh);
 }
 
 .flex-r,
@@ -314,6 +314,10 @@ section.slide-in-complete {
 }
 
 /* ========= HOME ========== */
+.home-container{
+  justify-content: center;
+}
+
 #home-info-svg {
   max-width: 70%;
 }
@@ -805,9 +809,6 @@ h2.title {
   #sub-headline {
     font-size: 1.5rem;
   }
-  #about-container.flex-r-bg-c-small {
-    flex-direction: column-reverse;
-  }
   #about-container > img {
     width: 200px;
     height: 200px;
@@ -815,9 +816,6 @@ h2.title {
   }
   #nav-menu-container {
     width: calc(100%);
-  }
-  .flex-r-bg-c-small {
-    flex-direction: column;
   }
   .swiper-button-next.orange-nav-next:after,
   .swiper-button-prev.orange-nav-prev:after {
@@ -903,18 +901,27 @@ h2.title {
   .cursor {
     display: none;
   }
-  .flex-r-bg-c-small {
-    flex-direction: column;
-  }
   #about-container.flex-r-bg-c-small {
     flex-direction: column-reverse;
+  }
+  .flex-r-bg-c-small {
+    flex-direction: column;
   }
   .view-cta-btn {
     margin: auto;
   }
+  .ml-1{
+    margin-left: 0.5rem;
+  }
+  .mr-1{
+    margin-right: 0.5rem;
+  }
+  #about-container.flex-r-bg-c-small {
+    flex-direction: column-reverse;
+  }
 }
 
-/* Small Laptop Screens */
+/* Laptop Screens */
 @media screen and (min-width: 1024px) and (max-width: 1500px) {
   .card img {
     margin: 2px;
@@ -936,18 +943,20 @@ h2.title {
   h1{
     font-size: 3rem;
   }
-  
+}
+
+/* Small Laptop Screens */
+@media screen and (min-width: 1024px) and (max-width: 1200px){
+  #about-container.flex-r-bg-c-small {
+    flex-direction: column-reverse;
+  }
+  .flex-r-bg-c-small {
+    flex-direction: column;
+  }
 }
 
 /* Desktop */
 @media screen and (min-width: 1023px) {
-  .middle {
-    position: absolute;
-    top: calc(78vh);
-    display: block;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
   #nav-menu-container {
     width: 400px;
   }
@@ -955,6 +964,18 @@ h2.title {
     height: 730px;
   }
 }
+
+/* Desktop Height */
+@media screen and (min-height: 670px) {
+  .middle {
+    position: absolute;
+    top: calc(85vh);
+    display: block;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 
 /* Bigger Screens */
 @media screen and (min-height: 900px) {

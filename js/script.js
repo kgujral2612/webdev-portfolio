@@ -180,7 +180,7 @@ menuItems.forEach((el) => {
 // swiper js, swiper css, and click sound
 //===================================================
 
-const workSection = document.querySelector("#work")
+const preWorkSection = document.querySelector("#skills")
 
 const makeClickSound = () => {
   var clickSound= document.querySelector("#click-sound");
@@ -222,10 +222,10 @@ let observer = new IntersectionObserver(function(entries) {
     setTimeout(function() {
       lazyLoadCarousel()
     }, 500)
-    observer.unobserve(workSection)
+    observer.unobserve(preWorkSection)
   }
 });
-observer.observe(workSection)
+observer.observe(preWorkSection)
 
 //===================================================
 // ============= Lazy Load Images  =============

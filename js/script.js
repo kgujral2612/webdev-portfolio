@@ -158,7 +158,6 @@ animatedMouse.addEventListener("click", function () {
 
 // Nav container must remain hidden until page load
 addEventListener("load", (event) => {
-  console.log("The page is fully loaded.");
   navMenuContainer.classList.remove("hidden");
   navMenuContainer.classList.add("show");
 });
@@ -192,7 +191,8 @@ menuItems.forEach((el) => {
 // swiper js, swiper css, and click sound
 //===================================================
 
-const preWorkSection = document.querySelector("#skills");
+const homeSection = document.querySelector("#home"); // lazy load after loading the home section
+const workSection = document.querySelector("#work"); // if not at home, lazy load after work
 
 const makeClickSound = () => {
   var clickSound = document.querySelector("#click-sound");
@@ -206,6 +206,7 @@ const makeClickSound = () => {
     });
   });
 };
+
 const lazyLoadCarousel = () => {
   const scriptTag = document.createElement("script");
   scriptTag.src = "./js/swiper.js";
@@ -235,10 +236,22 @@ let observer = new IntersectionObserver(function (entries) {
     setTimeout(function () {
       lazyLoadCarousel();
     }, 500);
-    observer.unobserve(preWorkSection);
+    observer.unobserve(homeSection);
   }
 });
-observer.observe(preWorkSection);
+
+observer.observe(homeSection);
+
+let workObserver = new IntersectionObserver(function (entries) {
+  if (entries[0].isIntersecting) {
+    setTimeout(function () {
+      lazyLoadCarousel();
+    }, 500);
+    workObserver.unobserve(workSection);
+  }
+});
+
+workObserver.observe(workSection);
 
 //===================================================
 // ============= Lazy Load Images  =============

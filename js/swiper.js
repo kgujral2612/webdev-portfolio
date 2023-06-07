@@ -10520,19 +10520,9 @@
 
 var swiper = new Swiper('.swiper', {
     slidesPerView: window.innerWidth > 1023 ? 3 : window.innerWidth > 767 ? 2 : 1,
-    direction: getDirection(),
+    direction: 'horizontal',
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
-    },
-    on: {
-      resize: function () {
-        swiper.changeDirection(getDirection());
-      },
-    },
-    
+    }
   });
-  
-  function getDirection() {
-    return window.innerWidth <= 760 ? 'vertical' : 'horizontal';
-  }

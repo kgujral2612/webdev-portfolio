@@ -123,10 +123,10 @@ audio {
 .align-text-c {
   text-align: center;
 }
-.ml-1{
+.ml-1 {
   margin-left: 1rem;
 }
-.mr-1{
+.mr-1 {
   margin-right: 1rem;
 }
 
@@ -314,7 +314,7 @@ section.slide-in-complete {
 }
 
 /* ========= HOME ========== */
-.home-container{
+.home-container {
   justify-content: center;
 }
 
@@ -913,10 +913,10 @@ h2.title {
   .view-cta-btn {
     margin: auto;
   }
-  .ml-1{
+  .ml-1 {
     margin-left: 0.5rem;
   }
-  .mr-1{
+  .mr-1 {
     margin-right: 0.5rem;
   }
   #about-container.flex-r-bg-c-small {
@@ -943,13 +943,13 @@ h2.title {
   .slide-container {
     height: 700px;
   }
-  h1{
+  h1 {
     font-size: 3rem;
   }
 }
 
 /* Small Laptop Screens */
-@media screen and (min-width: 1024px) and (max-width: 1200px){
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
   #about-container.flex-r-bg-c-small {
     flex-direction: column-reverse;
   }
@@ -989,17 +989,17 @@ h2.title {
 
 /* Galaxy Fold and other slim devices*/
 @media screen and (max-width: 300px) {
-  h1{
+  h1 {
     font-size: 2rem;
   }
-  #sub-headline{
+  #sub-headline {
     font-size: 1.2rem;
   }
-  .big-button{
+  .big-button {
     font-size: 0.6rem;
     padding: 8px 12px;
   }
-  .exp-img{
+  .exp-img {
     width: calc(80vw);
     height: calc(60vw);
   }

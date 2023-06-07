@@ -686,6 +686,7 @@ h2.title {
 
 .desc {
   font-size: 1rem;
+  color: var(--color-almost-black);
 }
 
 .tech-tag {
@@ -698,16 +699,9 @@ h2.title {
   display: flex;
   align-items: center;
 }
-.tech-tag.yellow {
-  background: var(--color-highlight-yellow);
-}
+
 .tech-tag.purple {
   background: var(--color-highlight-purple);
-}
-.tech-tag.grey {
-  background: white;
-  border: 1px solid #7c8594;
-  color: #7c8594;
 }
 
 /* ========= CONTACT ========== */

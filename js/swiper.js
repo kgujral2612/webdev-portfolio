@@ -10526,3 +10526,19 @@ var swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
     }
   });
+
+window.addEventListener('resize', function() {
+    // Destroy the existing Swiper instance
+    swiper.destroy();
+  
+    // Initialize a new Swiper instance with updated settings
+    swiper = new Swiper('.swiper', {
+      // Your updated Swiper settings here
+      slidesPerView: window.innerWidth > 1199 ? 3 : window.innerWidth > 767 ? 2 : 1,
+      direction: 'horizontal',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    });
+});

@@ -630,6 +630,8 @@ h2.title {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .swiper-button-next.orange-nav-next,
@@ -863,7 +865,8 @@ h2.title {
     width: 400px;
   }
   .slide-container.swiper {
-    width: 750px;
+    width: 650px;
+    max-width: 750px;
   }
   .slide-content.swiper-wrapper {
     height: 650px;
@@ -976,11 +979,28 @@ h2.title {
   }
 }
 
-
 /* Bigger Screens */
 @media screen and (min-height: 900px) {
   .home-info-container {
     align-items: center;
     text-align: center;
+  }
+}
+
+/* Galaxy Fold and other slim devices*/
+@media screen and (max-width: 300px) {
+  h1{
+    font-size: 2rem;
+  }
+  #sub-headline{
+    font-size: 1.2rem;
+  }
+  .big-button{
+    font-size: 0.6rem;
+    padding: 8px 12px;
+  }
+  .exp-img{
+    width: calc(80vw);
+    height: calc(60vw);
   }
 }

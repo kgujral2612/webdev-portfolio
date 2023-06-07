@@ -964,3 +964,11 @@ and (max-width: 1023px){
         height: 730px;
     }
 }
+
+/* Bigger Screens */
+@media screen and (min-height: 900px){
+    .home-info-container{
+        align-items: center;
+        text-align: center;
+    }
+}

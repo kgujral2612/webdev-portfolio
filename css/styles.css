@@ -111,7 +111,13 @@ audio{
 .color-black{
     color:black;
 }
+.align-items-c{
+    align-items: center;
+}
 
+.align-text-c{
+    text-align: center;
+}
 
 /* ========= BUTTON STYLES ========== */
 
@@ -389,10 +395,6 @@ h1 span {
     }
 }
 /* ========= ABOUT ========== */
-#about-container{
-    align-items: center;
-}
-
 #about-container p {
     max-width: 60%;
     padding: 2rem 4rem 2rem 0;
@@ -432,7 +434,6 @@ h1 span {
 .menu-icon{
     position: relative;
     justify-content: center;
-    align-items: center;
     width: 48px;
     height: 48px;
     border-radius: 15px;

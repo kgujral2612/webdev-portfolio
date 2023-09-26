@@ -109,6 +109,9 @@ section {
 .padding-bottom-6 {
   padding-bottom: 6rem;
 }
+.padding-top-3 {
+  padding-top: 3rem;
+}
 audio {
   display: none;
 }
@@ -537,8 +540,8 @@ ul.exp-tasks {
   padding: 0;
 }
 .exp-img {
-  width: 700px;
-  height: 400px;
+  width: 600px;
+  height: 350px;
 }
 
 li {

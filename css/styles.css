@@ -523,7 +523,7 @@ h1 span {
 }
 .exp-heading {
   justify-content: flex-start;
-  padding: 1rem 0 1rem 0;
+  padding: 1.1rem 0 1rem 0;
 }
 .exp-heading > img {
   margin-right: 1rem;
@@ -540,8 +540,9 @@ ul.exp-tasks {
   padding: 0;
 }
 .exp-img {
-  width: 600px;
-  height: 350px;
+  width: 550px;
+  height: 300px;
+  padding: 1rem;
 }
 
 li {
